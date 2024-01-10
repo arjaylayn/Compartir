@@ -54,7 +54,6 @@ body{
 /* ------------------ SECCION 2 / AUTOR------------------ */
 .tarjeta__seccion2__autor{
     margin: 25px 0px 0px 0px;
-    border: 1px solid red;
     display: flex; /*modificar esto*/
     flex-direction: row;
     align-items: center;
