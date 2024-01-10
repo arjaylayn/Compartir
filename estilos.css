@@ -1,0 +1,197 @@
+/* ------------------ GENERAL ------------------ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ------------------ COLORES ------------------ */
+:root{
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+/* ------------------ IMPORTACIONES ------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+/* ------------------ CUERPO ------------------ */
+body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    background-color: var(--Light-Grayish-Blue);
+}
+/* ------------------ TARJETA ------------------ */
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width:320px; 
+    height: 510px; 
+    border-radius: 12px;  
+    margin: 80px auto;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+/* ------------------ SECCION 1 ------------------ */
+.tarjeta__seccion1__imagen{
+    width: 100%;
+    height: 200px;
+}
+/* ------------------ SECCION 2 ------------------ */
+.prueba{
+    margin: 30px 23px 10px 23px;
+}
+.tarjeta__seccion2__titulo{
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size:1.3em;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+.tarjeta__seccion2__parrafo{
+    color: var(--Desaturated-Dark-Blue);
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+/* ------------------ SECCION 2 / AUTOR------------------ */
+.tarjeta__seccion2__autor{
+    margin: 25px 0px 0px 0px;
+    border: 1px solid red;
+    display: flex; /*modificar esto*/
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+}
+.tarjeta__seccion2__autor__imagen_foto{
+    width: 15%;
+    border-radius: 50%;
+    order:1;
+}
+.tarjeta__seccion2_autor_informacion{
+    display: flex;
+    flex-direction: column;
+    order:2;
+    flex-basis: 60%;
+}
+.tarjeta__seccion2__autor__nombre{
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+.tarjeta__seccion2__autor__fecha{
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size:0.9em;
+}
+
+.compartir__logo{
+    position: absolute;
+    right: 30px;
+    bottom: 27px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 50%;
+    padding: 7px 8px;
+    
+}
+.compartir__logo:hover{
+    cursor: pointer;
+    background-color: var(--Desaturated-Dark-Blue);
+}
+.compartir__logo:hover path{
+    fill: white;
+}
+/* ------------------ SECCION 2 / SHARE------------------ */
+.social{
+    display: none; /*modificar esto*/
+    width: 100%;
+    height: 80px; 
+    padding:20px;  
+    align-items: center;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    border-radius: 0px 0px 12px 12px; 
+    gap: 15px;
+
+    
+}
+.social_dato{
+
+    color: var(--Desaturated-Dark-Blue);
+    padding: 10px;
+    font-size:1.3em;
+}
+.social_dato_icono{
+    width: 120%;
+
+}
+.noshow{
+    display: none;
+}
+.show{
+    display: flex; /*modificar esto*/
+}
+
+/* ------------------ FOOTER ------------------ */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+/* ------------------ MEDIA ------------------ */
+@media only screen and (min-width: 720px) {
+    .tarjeta{
+        display: flex;
+        flex-direction: row;
+        width: 700px;
+        height: 300px; 
+    }
+    .tarjeta__seccion1{
+        order:1;
+        flex-basis: 40%;
+    }
+    .tarjeta__seccion1__imagen{
+        width: 100%;
+        height: 100%;
+    }
+    .tarjeta__seccion2{
+        order:2;
+        flex-basis: 60%;
+    }
+    .tarjeta__seccion2__titulo{
+        font-size: 1.8em;
+        line-height: 30px; 
+    }
+    .tarjeta__seccion2__autor{
+        display: flex; /*modificar esto*/
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        gap: 15px;
+    }
+    .tarjeta__seccion2__autor__imagen_foto{
+        width: 12%;
+        border-radius: 50%;
+        order:1;
+    }
+    .compartir__logo{
+        position: absolute;
+        right: 30px;
+        bottom: 35px;
+    }
+
+/* ------------------ SECCION 2 / SHARE------------------ */
+    .social{
+        width: 250px;
+        height: 56px;
+        bottom: 80px;
+        right: -40px;
+        border-radius: 12px;
+        position: absolute;
+    }
+    .social::after{
+        content: "";
+        border: 10px solid;
+        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent;
+        position: absolute;
+        left: 155px;
+        bottom: -20px;
+        right: 100%;
+    }
+    
+}
